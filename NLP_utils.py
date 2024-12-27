@@ -6,6 +6,10 @@ model_name = "facebook/bart-large-cnn"
 model = BartForConditionalGeneration.from_pretrained(model_name)
 tokenizer = BartTokenizer.from_pretrained(model_name)
 
+# Load question-answering model and pipeline
+qa_model_name = "deepset/roberta-base-squad2"
+qa_pipeline = pipeline("question-answering", model=qa_model_name, tokenizer=qa_model_name)
+
 def extract_text_from_pdf(pdf_file):
     """Extracts text from an uploaded PDF file."""
     reader = PdfReader(pdf_file)
@@ -32,3 +36,8 @@ def summarize_long_text(text, chunk_size=1024):
     chunks = [text[i:i + chunk_size] for i in range(0, len(text), chunk_size)]
     summaries = [summarize_text(chunk) for chunk in chunks]
     return " ".join(summaries)
+
+def answer_question(text, question):
+    """Answer a question based on the provided context text."""
+    result = qa_pipeline(question=question, context=text)
+    return result['answer']
