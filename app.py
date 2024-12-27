@@ -1,7 +1,44 @@
 import streamlit as st
 from NLP_utils import extract_text_from_pdf, summarize_long_text, answer_question
 
-st.title("PDF/Text Summarization and Question Answering App")
+# Set the page config for the app
+st.set_page_config(
+    page_title="Summarizer & QA App",
+    page_icon="📄",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Adding custom CSS styles
+st.markdown(
+    """
+    <style>
+    .stButton>button {
+        background-color: #FF4B4B;
+        color: white;
+        font-size: 16px;
+    }
+    .stTextArea>textarea {
+        font-size: 16px;
+        color: #333333;
+    }
+    .css-18e3th9 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #FF4B4B;
+    }
+    .css-1d391kg {
+        background-color: #F0F2F6;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.title("📄 PDF/Text Summarization and Question Answering App")
+
+# Variable to store summary
+summary = ""
 
 # User selects input method
 input_option = st.radio(
@@ -44,3 +81,8 @@ elif input_option == "Enter Text":
         answer = answer_question(user_text, question)
         st.subheader("Answer")
         st.write(answer)
+
+# Display the summary only once and keep it visible
+if summary:
+    st.subheader("Summary")
+    st.write(summary)
