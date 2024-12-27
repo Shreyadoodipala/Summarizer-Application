@@ -13,19 +13,9 @@ st.set_page_config(
 st.markdown(
     """
     <style>
-    .stButton>button {
-        background-color: #FF4B4B;
-        color: white;
-        font-size: 16px;
-    }
     .stTextArea>textarea {
         font-size: 16px;
         color: #333333;
-    }
-    .css-18e3th9 {
-        font-size: 24px;
-        font-weight: bold;
-        color: #FF4B4B;
     }
     .css-1d391kg {
         background-color: #F0F2F6;
