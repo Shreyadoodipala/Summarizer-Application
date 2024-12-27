@@ -1,5 +1,5 @@
 import streamlit as st
-from nlp_utils import extract_text_from_pdf, summarize_long_text, answer_question
+from NLP_utils import extract_text_from_pdf, summarize_long_text, answer_question
 
 st.title("PDF/Text Summarization and Question Answering App")
 
