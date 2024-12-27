@@ -1,5 +1,5 @@
 from PyPDF2 import PdfReader
-from transformers import BartForConditionalGeneration, BartTokenizer
+from transformers import BartForConditionalGeneration, BartTokenizer, pipeline
 
 # Load summarization model and tokenizer
 model_name = "facebook/bart-large-cnn"
