@@ -81,8 +81,3 @@ elif input_option == "Enter Text":
         answer = answer_question(user_text, question)
         st.subheader("Answer")
         st.write(answer)
-
-# Display the summary only once and keep it visible
-if summary:
-    st.subheader("Summary")
-    st.write(summary)
