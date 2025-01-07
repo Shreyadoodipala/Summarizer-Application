@@ -41,7 +41,7 @@ if input_option == "Upload PDF":
     if uploaded_file is not None:
         # Extract text from the uploaded PDF
         pdf_text = extract_text_from_pdf(uploaded_file)
-        st.subheader("Extracted Text")
+        st.subheader("Extracted Text (excerpt)")
         st.write(pdf_text[:1000])  # Display only the first 1000 characters
 
         # Summarize the text
