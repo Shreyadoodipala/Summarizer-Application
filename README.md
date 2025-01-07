@@ -8,7 +8,9 @@ The PDF/Text Summarization and Question Answering App is an interactive web appl
 
 ## Models Used (from Hugging Face)
 #### BART (Bidirectional and Auto-Regressive Transformers)
-Used for text summarization. BART is a powerful transformer model trained for both sequence-to-sequence tasks (like summarization) and denoising tasks. The model is fine-tuned on large-scale datasets to generate coherent and concise summaries of long texts or documents.
+Used for text summarization. BART is a powerful transformer model trained for both sequence-to-sequence tasks (like summarization) and denoising tasks. 
+The model is fine-tuned on large-scale datasets to generate coherent and concise summaries of long texts or documents.
 
-#### DistilBERT
-Used for question answering. DistilBERT is a smaller, faster variant of the BERT model, which retains much of its accuracy while being computationally more efficient. It is fine-tuned for the task of question answering using the SQuAD dataset, enabling it to understand and extract answers from the provided text based on the user's questions.
+#### RoBERTA (Robustly Optimized BERT Approach)
+Used for question answering. RoBERTA is an advanced variant of BERT (Bidirectional Encoder Representations from Transformers), developed by Facebook AI to improve performance by optimizing training procedures. 
+It employs dynamic masking during training and excels in other NLP tasks, such as text classification and sentiment analysis as well.
